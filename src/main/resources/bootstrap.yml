@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    config: #设置git配置文件的取值
+      uri: http://localhost:8400/ #配置服务中心地址
+      label: master
+      name: page
+      profile: dev
+      fail-fast: true #快速失败
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
